@@ -1,31 +1,33 @@
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
-import './globals.css'
+import localFont from 'next/font/local'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+import '@/styles/globals.css'
+
+const recoleta = localFont({
+  src: '../fonts/recoleta.ttf',
+  variable: '--font-recoleta',
+})
+
+const satoshi = localFont({
+  src: '../fonts/satoshi.otf',
+  variable: '--font-satoshi',
 })
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s | Stamp',
-    default: 'Stamp',
-  },
+  title: 'Portal | Stamp',
   description: 'Stamp',
   icons: {
     icon: '/logo.png',
   },
 }
-
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: JSX.Element
 }>) {
   return (
-    <html lang='en'>
-      <body className={`${geistSans.variable} antialiased`}>{children}</body>
+    <html lang='en' suppressHydrationWarning>
+      <body className={`${satoshi.variable} ${recoleta.variable} font-satoshi antialiased`}>{children}</body>
     </html>
   )
 }

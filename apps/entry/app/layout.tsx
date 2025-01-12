@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-
+import '@/configs/reown'
 import '@/styles/globals.css'
 
 const recoleta = localFont({

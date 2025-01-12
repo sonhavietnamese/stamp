@@ -9,7 +9,7 @@ export const networks = [solanaDevnet] as [AppKitNetwork, ...AppKitNetwork[]]
 export const solanaAdapter = new SolanaAdapter({})
 
 // Create modal
-const modal = createAppKit({
+const reownModal = createAppKit({
   adapters: [solanaAdapter],
   networks,
   metadata: {
@@ -25,4 +25,4 @@ const modal = createAppKit({
   },
 })
 
-export { modal }
+export { reownModal }
