@@ -18,10 +18,32 @@ const reownModal = createAppKit({
     url: 'https://stamp.so',
     icons: ['https://avatars.githubusercontent.com/u/179229932?s=200&v=4'],
   },
+
+  themeVariables: {
+    '--w3m-font-family': "'__Inter_179fbf', '__Inter_Fallback_179fbf'",
+    '--w3m-accent': '#EF4444',
+    '--w3m-color-mix': '#FFFFFF',
+    '--w3m-color-mix-strength': 10,
+  },
+  enableWallets: true,
+  themeMode: 'dark',
   projectId,
-  themeMode: 'light',
   features: {
     analytics: false,
+    swaps: true,
+    onramp: true,
+    receive: true,
+    send: true,
+    email: false,
+    emailShowWallets: true,
+    socials: ['google', 'facebook', 'apple', 'x', 'discord', 'farcaster'],
+    history: true,
+    allWallets: true,
+    legalCheckbox: false,
+    smartSessions: false,
+    collapseWallets: true,
+    walletFeaturesOrder: ['onramp', 'swaps', 'receive', 'send'],
+    connectMethodsOrder: ['wallet', 'email', 'social'],
   },
 })
 

@@ -58,7 +58,7 @@ function User() {
         <span className='text-sm text-black/60'>{formatAddress(address)}</span>
       </div>
 
-      <figure className='w-9 h-9 rounded-full bg-gray-200'>
+      <figure className='w-9 h-9 '>
         <Image src='/user-avatar-placeholder.png' alt='avatar' width={40} height={40} />
       </figure>
     </div>

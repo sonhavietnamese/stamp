@@ -15,10 +15,11 @@ export default function Home() {
       <section className='h-full w-full overflow-auto relative rounded-[32px] bg-[#D9D9D9]'>
         <figure className='w-full h-full inset-0'>
           <Image
+            draggable={false}
             src='https://images.unsplash.com/photo-1591866605101-67aa6d498cce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             alt='background'
             fill
-            className='object-cover'
+            className='select-none object-cover'
           />
         </figure>
         <div className='gradient-blur bottom-0'>

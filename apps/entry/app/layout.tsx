@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     icon: '/logo.png',
   },
 }
+
 export default function RootLayout({
   children,
 }: Readonly<{
