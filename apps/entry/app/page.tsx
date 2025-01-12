@@ -4,6 +4,8 @@ import Header from '@/components/header'
 import { reownModal } from '@/configs/reown'
 import { useAppKitAccount } from '@reown/appkit/react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
   return (
@@ -43,19 +45,48 @@ export default function Home() {
 }
 
 function Explore() {
+  const [isClicked, setIsClicked] = useState(false)
   const { isConnected } = useAppKitAccount()
 
   const handleExplore = () => {
     if (!isConnected) {
       reownModal.open()
     } else {
-      console.log('connected')
+      setIsClicked(true)
     }
   }
 
+  useEffect(() => {
+    if (isClicked) {
+      setTimeout(() => {
+        setIsClicked(false)
+      }, 3000)
+    }
+  }, [isClicked])
+
   return (
-    <button className='bg-[#EEF0F6] text-primary text-[18px] py-3 px-5 rounded-full' onClick={handleExplore}>
+    <motion.button
+      initial={{ width: 100 }}
+      animate={{ width: isClicked ? 120 : 100 }}
+      transition={{ duration: 0.2 }}
+      className='bg-[#EEF0F6] items-center flex text-primary text-[18px] py-3 px-5 rounded-full'
+      onClick={handleExplore}>
       Explore
-    </button>
+      <motion.figure className='w-4 h-4 ml-1 '>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='#000'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          className='w-full h-full animate-spin'>
+          <path d='M21 12a9 9 0 1 1-6.219-8.56' />
+        </svg>
+      </motion.figure>
+    </motion.button>
   )
 }

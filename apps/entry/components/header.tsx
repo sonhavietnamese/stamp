@@ -52,10 +52,10 @@ function User() {
   const { address, embeddedWalletInfo } = useAppKitAccount()
 
   return (
-    <div className='flex items-center justify-center gap-3 leading-none'>
-      <div className='flex flex-col gap-[1px] items-end mb-0.5'>
+    <div className='flex items-center justify-center gap-2 leading-none'>
+      <div className='flex flex-col items-end mb-0.5'>
         <span className='font-medium'>{computeUsername(embeddedWalletInfo?.user?.email)}</span>
-        <span className='text-sm text-black/50'>{formatAddress(address)}</span>
+        <span className='text-sm text-black/60'>{formatAddress(address)}</span>
       </div>
 
       <figure className='w-9 h-9 rounded-full bg-gray-200'>
