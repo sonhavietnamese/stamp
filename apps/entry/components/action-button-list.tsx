@@ -1,4 +1,4 @@
-import { useAppKit, useDisconnect, useAppKitNetwork, useAppKitTheme } from '@/configs/reown'
+import { useAppKit, useDisconnect, useAppKitNetwork, useAppKitTheme } from '@reown/appkit/react'
 import { solana } from '@reown/appkit/networks'
 
 export function ActionButtonList() {
