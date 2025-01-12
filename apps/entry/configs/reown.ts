@@ -1,8 +1,9 @@
 import { SolanaAdapter } from '@reown/appkit-adapter-solana'
 import { solanaDevnet, type AppKitNetwork } from '@reown/appkit/networks'
 import { createAppKit } from '@reown/appkit/react'
+import { env } from '@/env'
 
-export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || 'b56e18d47c72ab683b10814fe9495694'
+export const projectId = env.NEXT_PUBLIC_REOWN_PROJECT_ID
 
 export const networks = [solanaDevnet] as [AppKitNetwork, ...AppKitNetwork[]]
 
