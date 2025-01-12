@@ -12,6 +12,10 @@ export default {
         recoleta: 'var(--font-recoleta)',
         satoshi: 'var(--font-satoshi)',
       },
+      textColor: {
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+      },
     },
   },
   plugins: [],
