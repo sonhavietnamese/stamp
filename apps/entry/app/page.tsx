@@ -6,6 +6,7 @@ import { useAppKitAccount } from '@reown/appkit/react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { GradientBlur } from '@/components/gradient-blur'
 
 export default function Home() {
   return (
@@ -22,14 +23,7 @@ export default function Home() {
             className='select-none object-cover'
           />
         </figure>
-        <div className='gradient-blur bottom-0'>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <GradientBlur className='bottom-0' />
       </section>
       <section className='px-1'>
         <h2 className='text-[44px] font-medium font-recoleta text-primary'>Found a Spot!</h2>
