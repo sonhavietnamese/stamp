@@ -14,7 +14,7 @@ const satoshi = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Portal | Stamp',
+  title: 'Stamp',
   description: 'Stamp',
   icons: {
     icon: '/logo.png',
