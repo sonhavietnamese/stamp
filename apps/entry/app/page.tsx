@@ -7,35 +7,38 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { GradientBlur } from '@/components/gradient-blur'
+import DeviceWrapper from '@/components/device-wrapper'
 
 export default function Home() {
   return (
-    <main className='w-dvw flex gap-4 flex-col p-4 h-dvh font-satoshi'>
-      <Header />
+    <DeviceWrapper>
+      <main className='w-dvw flex gap-4 flex-col p-4 h-dvh font-satoshi'>
+        <Header />
 
-      <section className='h-full w-full overflow-auto relative rounded-[32px] bg-[#D9D9D9]'>
-        <figure className='w-full h-full inset-0'>
-          <Image
-            draggable={false}
-            src='https://images.unsplash.com/photo-1591866605101-67aa6d498cce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            alt='background'
-            fill
-            className='select-none object-cover'
-          />
-        </figure>
-        <GradientBlur className='bottom-0' />
-      </section>
-      <section className='px-1'>
-        <h2 className='text-[44px] font-medium font-recoleta text-primary'>Found a Spot!</h2>
-        <p className='text-[16px] text-secondary leading-[1.3] mt-2'>
-          The largest web design and iOS library for UX/UI inspiration, featuring real-life products and perfectly organized to fuel your creativity
-        </p>
-      </section>
+        <section className='h-full w-full overflow-auto relative rounded-[32px] bg-[#D9D9D9]'>
+          <figure className='w-full h-full inset-0'>
+            <Image
+              draggable={false}
+              src='https://images.unsplash.com/photo-1591866605101-67aa6d498cce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              alt='background'
+              fill
+              className='select-none object-cover'
+            />
+          </figure>
+          <GradientBlur className='bottom-0' />
+        </section>
+        <section className='px-1'>
+          <h2 className='text-[44px] font-medium font-recoleta text-primary'>Found a Spot!</h2>
+          <p className='text-[16px] text-secondary leading-[1.3] mt-2'>
+            The largest web design and iOS library for UX/UI inspiration, featuring real-life products and perfectly organized to fuel your creativity
+          </p>
+        </section>
 
-      <section className='mt-6 flex justify-end'>
-        <Explore />
-      </section>
-    </main>
+        <section className='mt-6 flex justify-end'>
+          <Explore />
+        </section>
+      </main>
+    </DeviceWrapper>
   )
 }
 

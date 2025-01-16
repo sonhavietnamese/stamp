@@ -9,7 +9,6 @@ export const networks = [solanaDevnet] as [AppKitNetwork, ...AppKitNetwork[]]
 
 export const solanaAdapter = new SolanaAdapter({})
 
-// Create modal
 const reownModal = createAppKit({
   adapters: [solanaAdapter],
   networks,
@@ -18,13 +17,6 @@ const reownModal = createAppKit({
     description: 'Stamp',
     url: 'https://stamp.so',
     icons: ['https://avatars.githubusercontent.com/u/179229932?s=200&v=4'],
-  },
-
-  themeVariables: {
-    '--w3m-font-family': "'__Inter_179fbf', '__Inter_Fallback_179fbf'",
-    '--w3m-accent': '#EF4444',
-    '--w3m-color-mix': '#FFFFFF',
-    '--w3m-color-mix-strength': 10,
   },
   enableWallets: true,
   themeMode: 'dark',
